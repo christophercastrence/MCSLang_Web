@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCSLang Examples</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <style>
+        .code-example {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .code-example h3 {
+            color: #f77062;
+            margin-bottom: 15px;
+        }
+        .code-description {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .examples-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .example-section {
+            margin-bottom: 40px;
+        }
+        .example-section h2 {
+            color: #f77062;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="./" id="navbar__logo">MCSL</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="./" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://github.com/christophercastrence/MCSLang-1.21.X" class="navbar__links">Github</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./examples.html" class="navbar__links">Examples</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main about-page">
+        <div class="examples-container">
+            <div class="example-section">
+                <h2>Basic Examples</h2>
+                
+                <div class="code-example">
+                    <h3>Hello World</h3>
+                    <p class="code-description">A simple example that prints "Hello World" to the chat.</p>
+                    <pre><code class="language-mcsl">print("Hello World!");</code></pre>
+</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Placing Blocks</h3>
+                    <p class="code-description">Built in functions can be used to place blocks</p>
+                    <pre><code class="language-mcsl">placeWall("stone", "north", 20, 10); // Places a wall of stone at player's position
+
+placeBlock(0, -1, 0, "oak_planks"); // Places block relative to the player's position
+</code></pre>
+                </div>
+            </div>
+
+            <div class="example-section">
+                <h2>Advanced Examples</h2>
+                
+                <div class="code-example">
+                    <h3>Fizz Buzz</h3>
+                    <p class="code-description">FizzBuzz can be recreated using a for loop</p>
+                    <pre><code class="language-mcsl">// Initialize counter and limit
+Let x = 0;
+Let i = 50;
+                        
+// FizzBuzz loop
+For (x upto i)
+    If (x % 15 == 0)
+        print("FizzBuzz");
+    Elif (x % 3 == 0)
+        print("Fizz");
+    Elif (x % 5 == 0)
+        print("Buzz");
+    else
+        print(x);</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Arithmetic</h3>
+                    <p class="code-description">MCSLang supports basic arithmetic operations</p>
+                    <pre><code class="language-mcsl">Let x = 4;
+
+Let y = x + 2;
+print(y)
+
+Let z = y - 1;
+print("y - 1 equals: ")
+print(z)
+                        
+Let a = z * 3;
+print("z * 3 equals: ")
+print(a)
+                        
+Let b = a / 2;
+print("a / 2 equals: ")
+print(b)</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+</body>
+</html>
