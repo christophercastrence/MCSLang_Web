@@ -86,7 +86,13 @@
 
 placeBlock(0, -1, 0, "oak_planks"); // Places block relative to the player's position
 
-spawn("zombie", 2, 0, 2); // Spawns zombie relative to the player's position
+Let x = 0;
+Let i = 50;
+
+While (x < i) {
+    spawn("zombie", 2, 0, 2); // Spawns 50 zombies relative to the player
+    x = x + 1;
+}
 </code></pre>
                 </div>
             </div>
@@ -122,15 +128,15 @@ Let y = x + 2;
 print(y)
 
 Let z = y - 1;
-print("y - 1 equals: ")
+print(y + " - 1 equals: ") // Showcase concatination
 print(z)
                         
 Let a = z * 3;
-print("z * 3 equals: ")
+print(z + " * 3 equals: ")
 print(a)
                         
 Let b = a / 2;
-print("a / 2 equals: ")
+print(a + " / 2 equals: ")
 print(b)</code></pre>
                 </div>
             </div>
